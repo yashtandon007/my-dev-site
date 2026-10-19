@@ -3,129 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeoTag Timestamp Camera - Support & Privacy</title>
+    <title>Gold Apps Labz | Official Android Developer Portfolio</title>
+    <meta name="description" content="Official website for Gold Apps Labz - Developers of GeoTag Timestamp Camera and Call Volume Sound Amplifier.">
     <style>
         :root {
-            --primary-color: #2196F3;
-            --secondary-color: #1976D2;
-            --text-color: #333;
-            --bg-color: #f4f7f6;
+            --primary: #1a1a1a;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --bg: #ffffff;
+            --text: #333333;
+            --light-gray: #f4f4f4;
         }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             margin: 0;
             padding: 0;
+            color: var(--text);
+            background-color: var(--light-gray);
+            line-height: 1.6;
         }
+
         header {
-            background-color: var(--primary-color);
+            background-color: var(--primary);
             color: white;
+            padding: 60px 20px;
             text-align: center;
-            padding: 3rem 1rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-bottom: 4px solid var(--secondary);
         }
-        .container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+
+        .dev-header h1 {
+            margin: 0;
+            font-size: 3rem;
+            letter-spacing: -1px;
         }
-        h1 { margin: 0; font-size: 2.5rem; }
-        h2 { color: var(--secondary-color); border-bottom: 2px solid #eee; padding-bottom: 0.5rem; margin-top: 2rem; }
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-        .feature-card {
-            padding: 1rem;
-            background: #f9f9f9;
-            border-left: 4px solid var(--primary-color);
-            border-radius: 4px;
-        }
-        .contact-box {
-            background: #e3f2fd;
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
-            margin-top: 2rem;
-        }
-        .email-link {
-            color: var(--secondary-color);
-            font-weight: bold;
-            text-decoration: none;
+
+        .dev-header p {
             font-size: 1.2rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 10px auto 0;
         }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-top: 0;
+            border-left: 5px solid var(--secondary);
+            padding-left: 15px;
+        }
+
+        /* Developer Info Section */
+        .dev-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: #fff;
+        }
+
+        .dev-logo {
+            width: 80px;
+            height: 80px;
+            background: var(--secondary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        /* App Portfolio */
+        .app-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .app-item {
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .app-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .app-item h3 {
+            margin-top: 0;
+            color: var(--secondary);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            background: #e1f5fe;
+            color: #01579b;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .play-button {
+            display: block;
+            text-align: center;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: auto;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .play-button:hover {
+            background: var(--secondary);
+        }
+
+        /* Support & Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .contact-item {
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+
         footer {
             text-align: center;
-            padding: 2rem;
-            font-size: 0.9rem;
-            color: #777;
+            padding: 40px 20px;
+            background: var(--primary);
+            color: white;
+            margin-top: 60px;
         }
-        @media (max-width: 600px) {
-            h1 { font-size: 1.8rem; }
-            .container { margin: 1rem; padding: 1.5rem; }
+
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid { grid-template-columns: 1fr; }
+            .dev-header h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>GeoTag Timestamp Camera</h1>
-    <p>Document your world with precision</p>
+    <div class="dev-header">
+        <h1>Gold Apps Labz</h1>
+        <p>Professional Android Development & Utility Solutions</p>
+    </div>
 </header>
 
 <div class="container">
-    <section>
-        <h2>About the App</h2>
-        <p>GeoTag Timestamp Camera is a versatile camera app designed for travelers, photographers, and professionals who need to document events with absolute accuracy. Automatically add precise geotags, timestamps, and location details to your captures instantly.</p>
+
+    <!-- Developer Account Information -->
+    <section class="card dev-info">
+        <div class="dev-logo">GA</div>
+        <div>
+            <h2>Developer Profile</h2>
+            <p><strong>Gold Apps Labz</strong> is a verified Google Play developer account specializing in utility and photography applications. We focus on creating high-performance, privacy-focused tools that enhance the mobile experience for users worldwide.</p>
+            <p>Member since: 2021 | Location: India</p>
+        </div>
     </section>
 
-    <section>
-        <h2>Key Features</h2>
-        <div class="features">
-            <div class="feature-card">
-                <strong>Pin Date & Location</strong>
-                <p>Automatically stamps latitude, longitude, and custom notes onto every photo.</p>
+    <!-- App Portfolio -->
+    <section class="card">
+        <h2>Our Applications</h2>
+        <div class="app-list">
+
+            <!-- App 1: GeoTag Camera -->
+            <div class="app-item">
+                <span class="badge">Photography</span>
+                <h3>GeoTag Timestamp Camera</h3>
+                <p>The ultimate tool for adding precise GPS location, date/time stamps, and custom notes to your photos. Ideal for field work, travel, and professional documentation.</p>
+                <ul>
+                    <li>Auto-Geotagging</li>
+                    <li>Professional Watermarking</li>
+                    <li>Map Overlay View</li>
+                </ul>
+                <a href="https://play.google.com/store/apps/details?id=com.notescamera.locationonphoto" class="play-button">View on Google Play</a>
             </div>
-            <div class="feature-card">
-                <strong>No Watermarks</strong>
-                <p>Enjoy clean photos without promotional marks or hidden branding.</p>
+
+            <!-- App 2: Sound Amplifier -->
+            <div class="app-item">
+                <span class="badge">Utility</span>
+                <h3>Call Volume Sound Amplifier</h3>
+                <p>Improve your communication experience with our advanced sound enhancement technology. Boost call volume and clarity with a single tap.</p>
+                <ul>
+                    <li>Clearer Voice Calls</li>
+                    <li>Volume Normalization</li>
+                    <li>Simple UI</li>
+                </ul>
+                <a href="https://play.google.com/store/apps/developer?id=Goldappslabz" class="play-button">View App Details</a>
             </div>
-            <div class="feature-card">
-                <strong>GPS Map Integration</strong>
-                <p>View exactly where your memories were captured with built-in map tracking.</p>
+
+        </div>
+    </section>
+
+    <!-- Privacy and Support -->
+    <section class="card">
+        <h2>Support & Privacy</h2>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <h3>Privacy Policy</h3>
+                <p>We take your privacy seriously. Our apps do not collect or share personal information. Data like location is processed locally on your device for stamping purposes only.</p>
             </div>
-            <div class="feature-card">
-                <strong>Instant Identification</strong>
-                <p>Use location stamps for quick memory recall and professional documentation.</p>
+            <div class="contact-item">
+                <h3>Technical Support</h3>
+                <p>Having issues or need a feature? Our support team is ready to help you.</p>
+                <p><strong>Email:</strong> <a href="mailto:goldappslabz@gmail.com">goldappslabz@gmail.com</a></p>
             </div>
         </div>
     </section>
 
-    <section id="privacy">
-        <h2>Privacy Policy</h2>
-        <p>We respect your privacy. <strong>GeoTag Timestamp Camera</strong> does not upload your personal photos or location data to any external servers. All processing happens locally on your device. We only request permissions (Camera, Location, Storage) necessary for the app to function as described.</p>
-        <p>For a detailed view of our privacy practices, please contact us or refer to the privacy section within the app settings.</p>
-    </section>
-
-    <section class="contact-box">
-        <h2>Support & Feedback</h2>
-        <p>Have questions or need assistance? Reach out to us:</p>
-        <a href="mailto:goldappslabz@gmail.com" class="email-link">goldappslabz@gmail.com</a>
-    </section>
 </div>
 
 <footer>
     <p>&copy; 2024 Gold Apps Labz. All rights reserved.</p>
-    <p><a href="app-ads.txt" style="color: #777;">app-ads.txt</a></p>
+    <div class="footer-links">
+        <a href="app-ads.txt">app-ads.txt</a>
+        <a href="https://play.google.com/store/apps/developer?id=Goldappslabz">Google Play Profile</a>
+        <a href="#privacy">Privacy Terms</a>
+    </div>
 </footer>
 
 </body>
 </html>
-
