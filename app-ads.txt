@@ -1,1 +1,5 @@
 google.com, pub-7742762973514262, DIRECT, f08c47fec0942fa0
+applovin.com, f4ba95169a9a501650d9e41a6727869a, DIRECT
+facebook.com, 155234323801320, DIRECT, c3e20eee3f780d68
+google.com, pub-5486100768383502, DIRECT, f08c47fec0942fa0
+tappx.com, lbfbccf6b, DIRECT, 9f375a07da0318ec
